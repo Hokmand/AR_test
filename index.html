@@ -4,9 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+    <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
   </head>
   <body>
-    <a-scene rotation="0 1 1" mindar-image="imageTargetSrc: /atlas/atlas.mind; uiScanning:no" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" >
+    <a-scene rotation="0 1 1" 
+      mindar-image="imageTargetSrc: /atlas/atlas.mind; visible: false; uiScanning:no"
+      color-space="sRGB"
+      renderer="colorManagement: true, physicallyCorrectLights" 
+      vr-mode-ui="enabled: false" 
+      device-orientation-permission-ui="enabled: false"
+      gesture-detector >
       <a-assets>
         <img id="card" src="/atlas/atlasDetector.jpg" />
         <a-asset-item id="avatarModel" src="/atlas/pixel-cut3.glb"></a-asset-item>
